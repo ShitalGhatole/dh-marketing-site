@@ -46,7 +46,7 @@ A modern, high-performance, and fully accessible B2B marketing website built wit
 
 | Domain | Technologies Used |
 | :--- | :--- |
-| **Framework** | [Next.js 14](https://nextjs.org/) (App Router) |
+| **Framework** | [Next.js 16.2.11](https://nextjs.org/) (App Router) |
 | **Language** | [TypeScript](https://www.typescriptlang.org/) |
 | **Styling** | SCSS / Sass Modules (`.module.scss`) |
 | **Icons & Media** | Inline SVGs (Zero third-party icon bundle footprint) |
