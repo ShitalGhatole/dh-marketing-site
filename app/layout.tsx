@@ -4,7 +4,7 @@ import Header from './components/layout/Header/Header';
 import Footer from './components/layout/Footer/Footer';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://your-domain.vercel.app'), // Replace with actual deployed URL later
+  metadataBase: new URL('https://dh-marketing-site.vercel.app/'),
   title: {
     default: 'HeroPulse | AI-Powered Workflow Automation',
     template: '%s | HeroPulse',
