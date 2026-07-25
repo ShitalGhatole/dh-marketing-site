@@ -3,7 +3,7 @@
 A modern, high-performance, and fully accessible B2B marketing website built with **Next.js 14 App Router**, **TypeScript**, and **SCSS Modules**. Designed with clean architecture, structured metadata (JSON-LD), and decoupled content for effortless maintainability.
 
 ![Lighthouse Score](https://img.shields.io/badge/Lighthouse-97%2F100-brightgreen?style=for-the-badge&logo=googlechrome)
-![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Sass](https://img.shields.io/badge/SCSS_Modules-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
