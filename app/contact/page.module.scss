@@ -1,0 +1,126 @@
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.hero {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+
+  .badge {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #eff6ff;
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+
+    @media (max-width: 640px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.infoSection {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+
+  h2 {
+    font-size: 1.35rem;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtext {
+    color: #64748b;
+    font-size: 0.925rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .infoCardGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .infoCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+
+    .iconWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background-color: #eff6ff;
+      color: #2563eb;
+      flex-shrink: 0;
+    }
+
+    strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #0f172a;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    a,
+    span {
+      color: #475569;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+  }
+}

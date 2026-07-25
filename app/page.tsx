@@ -1,38 +1,58 @@
 import type { Metadata } from 'next';
-import './globals.scss';
-import Footer from './components/layout/Footer/Footer';
-import Header from './components/layout/Header/Header';
+import Link from 'next/link';
+import { homeContent } from './content/home';
+import styles from './page.module.scss';
+import FaqSection from './components/ui/FaqSection/FaqSection';
+import FeatureCard from './components/ui/FeatureCard/FeatureCard';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://your-domain.vercel.app'), // Replace with actual deployed URL later
-  title: {
-    default: 'HeroPulse | AI-Powered Workflow Automation',
-    template: '%s | HeroPulse',
-  },
-  description: 'HeroPulse helps enterprise teams automate workflows, monitor metrics, and scale efficiently with AI.',
-  openGraph: {
-    title: 'HeroPulse | AI-Powered Workflow Automation',
-    description: 'Automate workflows and scale faster with AI-driven operations.',
-    siteName: 'HeroPulse',
-    type: 'website',
-  },
+  title: 'Home | HeroPulse Automation',
+  description: homeContent.hero.description,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function HomePage() {
   return (
-    <html lang="en">
-      <body>
-        <a href="#main-content" className="sr-only focus:not-sr-only">
-          Skip to main content
-        </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <div className={styles.main}>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeContent.structuredData),
+        }}
+      />
+
+      {/* Hero Section */}
+      <section className={styles.hero} aria-labelledby="hero-title">
+        <span className={styles.badge}>{homeContent.hero.badge}</span>
+        <h1 id="hero-title" className={styles.title}>
+          {homeContent.hero.title}
+        </h1>
+        <p className={styles.description}>{homeContent.hero.description}</p>
+        <div className={styles.ctaGroup}>
+          <Link href={homeContent.hero.primaryCta.href} className={styles.primaryBtn}>
+            {homeContent.hero.primaryCta.text}
+          </Link>
+          <Link href={homeContent.hero.secondaryCta.href} className={styles.secondaryBtn}>
+            {homeContent.hero.secondaryCta.text}
+          </Link>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className={styles.features} aria-labelledby="features-title">
+        <div className={styles.sectionHeader}>
+          <h2 id="features-title">{homeContent.features.title}</h2>
+          <p>{homeContent.features.subtitle}</p>
+        </div>
+        <div className={styles.grid}>
+          {homeContent.features.items.map((item, index) => (
+            <FeatureCard key={index} title={item.title} description={item.description} />
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FaqSection faqs={homeContent.faqs} />
+    </div>
   );
 }

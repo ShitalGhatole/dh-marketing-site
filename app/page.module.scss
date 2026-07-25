@@ -1,0 +1,147 @@
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+
+  .badge {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #eff6ff;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+
+    @media (max-width: 640px) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .description {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .ctaGroup {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    .primaryBtn,
+    .secondaryBtn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .primaryBtn {
+      background-color: #0f172a;
+      color: #ffffff;
+
+      &:hover,
+      &:focus-visible {
+        background-color: #1e293b;
+      }
+    }
+
+    .secondaryBtn {
+      background-color: #f1f5f9;
+      color: #334155;
+
+      &:hover,
+      &:focus-visible {
+        background-color: #e2e8f0;
+      }
+    }
+  }
+}
+
+.features {
+  margin-bottom: 5rem;
+
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #64748b;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: #0f172a;
+    }
+
+    p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.faqs {
+  max-width: 800px;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .faqItem {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.5rem 0;
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+
+    p {
+      color: #64748b;
+    }
+  }
+}
