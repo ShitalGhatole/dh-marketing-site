@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
+import FeatureCard from '../components/ui/FeatureCard/FeatureCard';
 import { productContent } from '../content/product';
 import styles from './page.module.scss';
-import FeatureCard from '../components/ui/FeatureCard/FeatureCard';
 
 export const metadata: Metadata = {
   title: 'Product',

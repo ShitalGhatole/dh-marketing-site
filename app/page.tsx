@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { homeContent } from './content/home';
-import styles from './page.module.scss';
 import FaqSection from './components/ui/FaqSection/FaqSection';
 import FeatureCard from './components/ui/FeatureCard/FeatureCard';
+import { homeContent } from './content/home';
+import styles from './page.module.scss';
 
 export const metadata: Metadata = {
   title: 'Home | HeroPulse Automation',

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
+import ContactForm from '../components/ui/ContactForm/ContactForm';
 import { contactContent } from '../content/contact';
 import styles from './page.module.scss';
-import ContactForm from '../components/ui/ContactForm/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import './globals.scss';
-import Header from './components/layout/Header/Header';
 import Footer from './components/layout/Footer/Footer';
+import Header from './components/layout/Header/Header';
+import './globals.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dh-marketing-site.vercel.app/'),
