@@ -4,7 +4,7 @@
   z-index: 50;
   width: 100%;
   backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
   .nav {
@@ -14,17 +14,64 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     .logo {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #111;
+      color: #0f172a;
       text-decoration: none;
       letter-spacing: -0.02em;
     }
 
+    /* Hamburger Icon Styling */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 60;
+
+      .bar {
+        width: 100%;
+        height: 2px;
+        background-color: #0f172a;
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+      }
+
+      /* Animated X transformation when open */
+      &.active {
+        .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+
+      &:focus-visible {
+        outline: 2px solid #2563eb;
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 768px) {
+        display: flex;
+      }
+    }
+
+    /* Desktop Navigation List */
     .navList {
       display: flex;
+      align-items: center;
       gap: 2rem;
       list-style: none;
       margin: 0;
@@ -32,14 +79,51 @@
 
       a {
         text-decoration: none;
-        color: #555;
+        color: #475569;
         font-size: 0.95rem;
         font-weight: 500;
         transition: color 0.15s ease;
 
         &:hover,
         &:focus-visible {
-          color: #000;
+          color: #0f172a;
+        }
+      }
+
+      /* Mobile Slide-down Menu Styling */
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #e2e8f0;
+        box-sizing: border-box;
+        gap: 1.25rem;
+
+        /* Hide by default on mobile */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition: max-height 0.3s ease, opacity 0.25s ease, visibility 0.25s ease;
+
+        &.open {
+          max-height: 300px;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        a {
+          font-size: 1.05rem;
+          font-weight: 600;
+          width: 100%;
+          display: block;
         }
       }
     }
