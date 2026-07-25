@@ -1,0 +1,47 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .navList {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        color: #555;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.15s ease;
+
+        &:hover,
+        &:focus-visible {
+          color: #000;
+        }
+      }
+    }
+  }
+}
