@@ -35,38 +35,13 @@ export const homeContent = {
       answer: 'Yes, all data is encrypted at rest and in transit with complete role-based access controls.',
     },
   ],
-  // Valid JSON-LD Structured Data for SEO scoring
+  // Clean schema with only Organization info (FAQ schema is handled dynamically by FaqSection)
   structuredData: {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Organization',
-        'name': 'HeroPulse',
-        'url': 'https://your-domain.vercel.app',
-        'logo': 'https://your-domain.vercel.app/logo.png',
-        'sameAs': ['https://twitter.com/heropulse'],
-      },
-      {
-        '@type': 'FAQPage',
-        'mainEntity': [
-          {
-            '@type': 'Question',
-            'name': 'How easy is it to integrate HeroPulse?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'HeroPulse integrates with existing REST and GraphQL APIs in under 15 minutes using our pre-built connectors.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Is my enterprise data secure?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Yes, all data is encrypted at rest and in transit with complete role-based access controls.',
-            },
-          },
-        ],
-      },
-    ],
+    '@type': 'Organization',
+    name: 'HeroPulse',
+    url: 'https://your-domain.vercel.app',
+    logo: 'https://your-domain.vercel.app/logo.png',
+    sameAs: ['https://twitter.com/heropulse'],
   },
 };
