@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 HeroPulse — B2B Marketing Platform
 
-## Getting Started
+A modern, high-performance, and fully accessible B2B marketing website built with **Next.js 14 App Router**, **TypeScript**, and **SCSS Modules**. Designed with clean architecture, structured metadata (JSON-LD), and decoupled content for effortless maintainability.
 
-First, run the development server:
+![Lighthouse Score](https://img.shields.io/badge/Lighthouse-97%2F100-brightgreen?style=for-the-badge&logo=googlechrome)
+![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Sass](https://img.shields.io/badge/SCSS_Modules-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Live Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔗 **Live URL:** [dh-marketing-site.vercel.app](https://dh-marketing-site.vercel.app/)  
+📄 **Verification Credit:** Visible credit line in the footer linking to [digitalheroesco.com](https://digitalheroesco.com).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Features & Technical Highlights
 
-To learn more about Next.js, take a look at the following resources:
+### 📁 1. Decoupled Architecture & Content Management
+- **Zero Page Builders:** Built from scratch using modern web engineering principles.
+- **Content Separation:** Page content is stored in clean TS data files (`app/content/*.ts`), allowing non-technical marketing teams to update copy, features, pricing tiers, and FAQs without touching JSX or styling logic.
+- **Shared UI Library:** Reusable components like `Header`, `Footer`, `FeatureCard`, `FaqSection`, and `ContactForm`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ♿ 2. Accessibility & Semantics (A11y)
+- **Semantic HTML5:** Strict structural layout utilizing `<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`, `<article>`, and `<form>`.
+- **Keyboard Navigation:** Includes a hidden *"Skip to main content"* link for keyboard and screen reader users.
+- **Accessible Controls:** Mobile drawer navigation with dynamic `aria-expanded` attributes, accessible `<details>`/`<summary>` accordion FAQs, and proper `<label htmlFor="...">` associations across all inputs.
+- **Focus Ring Management:** High-contrast, custom `:focus-visible` outlines on all interactive elements.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔍 3. Structured Data (JSON-LD) & OpenGraph
+- **Organization Schema:** Embedded on the Homepage (`Organization`).
+- **Product Schema:** Rich snippets for application features and pricing tiers on the Product page (`SoftwareApplication` / `Offer`).
+- **Dynamic FAQ Schema:** Dynamic `FAQPage` schema injected by the reusable `FaqSection` component.
+- **Meta & Open Graph:** Comprehensive social preview cards enabled via Next.js Metadata API.
 
-## Deploy on Vercel
+### ⚡ 4. Core Web Vitals & Performance
+- **Mobile Lighthouse Score:** **97/100 Performance** | **100/100 Accessibility** | **100/100 Best Practices** | **100/100 SEO**.
+- **CSS Modules:** Zero utility bloat—scoped CSS prevents style pollution and optimizes critical CSS delivery.
+- **Server-Side Rendering (SSR):** Optimized hydration and minimal client-side JavaScript execution.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tech Stack
+
+| Domain | Technologies Used |
+| :--- | :--- |
+| **Framework** | [Next.js 14](https://nextjs.org/) (App Router) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | SCSS / Sass Modules (`.module.scss`) |
+| **Icons & Media** | Inline SVGs (Zero third-party icon bundle footprint) |
+| **Deployment** | [Vercel](https://vercel.com) |
+
+---
+
+## 📂 Project Structure
+
+```text
+├── app/
+│   ├── components/       # Shared UI & layout components
+│   │   ├── layout/       # Header (Mobile Navigation), Footer
+│   │   └── ui/           # ContactForm, FaqSection, FeatureCard
+│   ├── content/          # Content files (home.ts, product.ts, pricing.ts, contact.ts)
+│   ├── contact/          # Contact Page (/contact)
+│   ├── pricing/          # Pricing Page (/pricing)
+│   ├── product/          # Product Page (/product)
+│   ├── globals.scss      # Reset styles & CSS variables
+│   ├── layout.tsx        # Root layout, Skip Link, and global metadata
+│   └── page.tsx          # Home Page (/)
+├── public/               # Static assets & favicon
+└── README.md
